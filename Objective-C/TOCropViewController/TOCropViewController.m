@@ -82,7 +82,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
         _croppingStyle = style;
         
         // Set up base view controller behaviour
-        self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         self.modalPresentationStyle = UIModalPresentationFullScreen;
         self.automaticallyAdjustsScrollViewInsets = NO;
         self.hidesNavigationBar = true;

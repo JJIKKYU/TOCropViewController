@@ -381,6 +381,14 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
     public var toolbar: TOCropToolbar {
         return toCropViewController.toolbar
     }
+    
+    public var cropUIView: UIView {
+        return toCropViewController.view
+    }
+    
+    public var cropOverlayView: TOCropOverlayView {
+        return toCropViewController.cropView.gridOverlayView
+    }
 
     /*
      If this controller is embedded in UINavigationController its navigation bar is hidden by default. Set this property to false to show the navigation bar. This must be set before this controller is presented.
@@ -668,6 +676,10 @@ extension CropViewController {
                 delegate.cropViewController!(strongSelf, didFinishCancelled: finished)
             }
         }
+    }
+    
+    public func doneButtonTappedSwift() {
+        toCropViewController.commitCurrentCrop()
     }
 }
 
